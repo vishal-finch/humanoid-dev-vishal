@@ -34,6 +34,9 @@
         type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
       contact_force_l_heel_2_broadcaster:
         type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
+
+      imu_broadcaster:
+        type: imu_sensor_broadcaster/IMUSensorBroadcaster
   
   # ── Lower body: 12 joints (6 per leg) ─────────────────────────────────────────
   lower_body_controller:
@@ -163,4 +166,8 @@
       sensor_name: contact_force_l_heel_2
       frame_id: "foot_l"
 
+  imu_broadcaster:
+    ros__parameters:
+      sensor_name: imu_sensor
+      frame_id: "pelvis"
 

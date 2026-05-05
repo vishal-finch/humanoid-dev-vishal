@@ -85,7 +85,7 @@
         <!-- Structural body geoms: collide with each other -->
         <geom
             contype="4"
-            conaffinity="1"
+            conaffinity="4"
             friction="0.8 0.02 0.01"
             condim="3"
             rgba="0.7 0.7 0.7 1" />
@@ -224,7 +224,7 @@
             <geom name="pelvis_vis"
                 type="mesh" mesh="pelvis"
                 pos="0 0 0" euler="0 0 0"
-                contype="4" conaffinity="1" />
+                contype="4" conaffinity="4" />
 
             <inertial mass="5.565"
                 pos="-7.29606e-15 1.53753e-14 0.10941"
@@ -243,7 +243,7 @@
 
                 <geom name="hip_pitch_r_vis"
                     type="mesh" mesh="hip_pitch_r" pos="0 0 0" euler="0 0 0"
-                    contype="4" conaffinity="1" />
+                    contype="4" conaffinity="4" />
 
                 <inertial mass="1.008"
                     pos="-8.145e-05 0.003455 0.07278"
@@ -259,7 +259,7 @@
 
                     <geom name="hip_roll_r_vis"
                         type="mesh" mesh="hip_roll_r" pos="0 0 0" euler="0 0 0"
-                        contype="4" conaffinity="1" />
+                        contype="4" conaffinity="4" />
 
                     <inertial mass="1.319"
                         pos="3.521e-05 -3.037e-08 0.03968"
@@ -275,7 +275,7 @@
 
                         <geom name="thigh_r_vis"
                             type="mesh" mesh="thigh_r" pos="0 0 0" euler="0 0 0"
-                            contype="4" conaffinity="1" />
+                            contype="4" conaffinity="4" />
 
                         <inertial mass="2.264"
                             pos="0.01437 -0.13463 -0.04238"
@@ -291,7 +291,7 @@
 
                             <geom name="leg_shank_r_vis"
                                 type="mesh" mesh="leg_shank_r" pos="0 0 0" euler="0 0 0"
-                                contype="4" conaffinity="1" />
+                                contype="4" conaffinity="4" />
 
                             <inertial mass="1.446"
                                 pos="-0.14872 -0.00406 -0.50123"
@@ -307,7 +307,7 @@
 
                                 <geom name="uj_r_vis"
                                     type="mesh" mesh="uj_r" pos="0 0 0" euler="0 0 0"
-                                    contype="4" conaffinity="1" />
+                                    contype="4" conaffinity="4" />
 
                                 <inertial mass="0.098"
                                     pos="1.1e-10 -9.45e-14 -5.22e-05"
@@ -374,7 +374,7 @@
 
                 <geom name="hip_pitch_l_vis"
                     type="mesh" mesh="hip_pitch_l" pos="0 0 0" euler="0 0 0"
-                    contype="4" conaffinity="1" />
+                    contype="4" conaffinity="4" />
 
                 <inertial mass="1.008"
                     pos="-8.145e-05 0.003455 0.07278"
@@ -390,7 +390,7 @@
 
                     <geom name="hip_roll_l_vis"
                         type="mesh" mesh="hip_roll_l" pos="0 0 0" euler="0 0 0"
-                        contype="4" conaffinity="1" />
+                        contype="4" conaffinity="4" />
 
                     <inertial mass="1.319"
                         pos="3.521e-05 -3.037e-08 0.03968"
@@ -406,7 +406,7 @@
 
                         <geom name="thigh_l_vis"
                             type="mesh" mesh="thigh_l" pos="0 0 0" euler="0 0 0"
-                            contype="4" conaffinity="1" />
+                            contype="4" conaffinity="4" />
 
                         <inertial mass="2.264"
                             pos="0.01437 -0.13463 -0.04238"
@@ -422,7 +422,7 @@
 
                             <geom name="leg_shank_l_vis"
                                 type="mesh" mesh="leg_shank_l" pos="0 0 0" euler="0 0 0"
-                                contype="4" conaffinity="1" />
+                                contype="4" conaffinity="4" />
 
                             <inertial mass="1.446"
                                 pos="-0.14872 -0.00406 -0.50123"
@@ -438,7 +438,7 @@
 
                                 <geom name="uj_l_vis"
                                     type="mesh" mesh="uj_l" pos="0 0 0" euler="0 0 0"
-                                    contype="4" conaffinity="1" />
+                                    contype="4" conaffinity="4" />
 
                                 <inertial mass="0.098"
                                     pos="1.1e-10 -9.45e-14 -5.22e-05"
@@ -500,7 +500,7 @@
 
                 <geom name="torso_vis"
                     type="mesh" mesh="torso" pos="0 0 0" euler="0 0 0"
-                    contype="4" conaffinity="1" />
+                    contype="4" conaffinity="4" />
 
                 <inertial mass="4.529"
                     pos="0.00217 0.00139 0.22276"
@@ -517,7 +517,7 @@
 
                     <geom name="shoulder_pitch_r_vis"
                         type="mesh" mesh="shoulder_pitch_r" pos="0 0 0" euler="0 0 0"
-                        contype="4" conaffinity="1" />
+                        contype="4" conaffinity="4" />
 
                     <inertial mass="0.929"
                         pos="0.00218 -0.00191 0.02403"
@@ -533,7 +533,7 @@
 
                         <geom name="shoulder_roll_r_vis"
                             type="mesh" mesh="shoulder_roll_r" pos="0 0 0" euler="0 0 0"
-                            contype="4" conaffinity="1" />
+                            contype="4" conaffinity="4" />
 
                         <inertial mass="0.640"
                             pos="3.74e-04 -8.40e-07 0.02539"
@@ -549,7 +549,7 @@
 
                             <geom name="bicep_r_vis"
                                 type="mesh" mesh="bicep_r" pos="0 0 0" euler="0 0 0"
-                                contype="4" conaffinity="1" />
+                                contype="4" conaffinity="4" />
 
                             <inertial mass="0.648"
                                 pos="4.67e-04 -4.749e-03 -0.09020"
@@ -565,7 +565,7 @@
 
                                 <geom name="forearm_r_vis"
                                     type="mesh" mesh="forearm_r" pos="0 0 0" euler="0 0 0"
-                                    contype="4" conaffinity="1" />
+                                    contype="4" conaffinity="4" />
 
                                 <inertial mass="0.370"
                                     pos="0.00311 -0.03400 -0.10268"
@@ -586,7 +586,7 @@
 
                     <geom name="shoulder_pitch_l_vis"
                         type="mesh" mesh="shoulder_pitch_l" pos="0 0 0" euler="0 0 0"
-                        contype="4" conaffinity="1" />
+                        contype="4" conaffinity="4" />
 
                     <inertial mass="0.929"
                         pos="0.00218 -0.00191 0.02403"
@@ -602,7 +602,7 @@
 
                         <geom name="shoulder_roll_l_vis"
                             type="mesh" mesh="shoulder_roll_l" pos="0 0 0" euler="0 0 0"
-                            contype="4" conaffinity="1" />
+                            contype="4" conaffinity="4" />
 
                         <inertial mass="0.640"
                             pos="3.74e-04 -8.40e-07 0.02539"
@@ -618,7 +618,7 @@
 
                             <geom name="bicep_l_vis"
                                 type="mesh" mesh="bicep_l" pos="0 0 0" euler="0 0 0"
-                                contype="4" conaffinity="1" />
+                                contype="4" conaffinity="4" />
 
                             <inertial mass="0.648"
                                 pos="4.67e-04 -4.749e-03 -0.09020"
@@ -634,7 +634,7 @@
 
                                 <geom name="forearm_l_vis"
                                     type="mesh" mesh="forearm_l" pos="0 0 0" euler="0 0 0"
-                                    contype="4" conaffinity="1" />
+                                    contype="4" conaffinity="4" />
 
                                 <inertial mass="0.370"
                                     pos="0.00311 -0.03400 -0.10268"
@@ -700,7 +700,7 @@
        SENSORS
   ═══════════════════════════════════════════════════════ -->
     <sensor>
-        <framequat name="imu_quat" objtype="site" objname="imu_site" />
+        <framequat name="imu_orientation" objtype="site" objname="imu_site" />
         <gyro name="imu_gyro" site="imu_site" />
         <accelerometer name="imu_acc" site="imu_site" />
         <!-- Foot contact forces for future use in the walking controller -->

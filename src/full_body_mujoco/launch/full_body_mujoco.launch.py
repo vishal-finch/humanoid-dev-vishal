@@ -72,7 +72,6 @@ def create_nodes(context: LaunchContext):
     xacro_file       = os.path.join(pkg_share, 'urdf',   'full_body.xacro')
     controllers_yaml = os.path.join(pkg_share, 'config', 'full_body_controllers.yaml')
     mujoco_xml_templ = os.path.join(pkg_share, 'config', 'angad_full_body.xml')
-    rviz_config_file = os.path.join(pkg_share, 'config', 'angad.rviz')
 
     # ── Launch argument values ─────────────────────────────────────────────────
     rviz_enabled = LaunchConfiguration('rviz').perform(context)
@@ -202,6 +201,15 @@ def create_nodes(context: LaunchContext):
         for name in ft_broadcaster_names
     ]
 
+    # ── 3c. IMU sensor broadcaster spawner ────────────────────────────────────
+    imu_broadcaster = Node(
+        package='controller_manager',
+        executable='spawner',
+        name='imu_broadcaster_spawner',
+        arguments=['imu_broadcaster', '-c', '/controller_manager', '--param-file', controllers_yaml],
+        output='screen',
+    )
+
     # ── 4. RViz2 (optional) ────────────────────────────────────────────────────
     rviz2 = Node(
         condition=IfCondition(rviz_enabled),
@@ -209,17 +217,7 @@ def create_nodes(context: LaunchContext):
         executable='rviz2',
         name='rviz2',
         output='log',
-        arguments=['-d', rviz_config_file],
         parameters=[{'use_sim_time': True}],
-    )
-
-    # ── 4b. Static TF Publisher (odom -> base_link) ────────────────────────────
-    # Provides a default fixed frame for RViz and satisfies controller TF lookups
-    odom_static_tf = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        arguments=['0', '0', '0', '0', '0', '0', 'odom', 'base_link'],
-        output='screen'
     )
 
     # ── 5. Standing pose publisher — commands initial pose to all controllers ────
@@ -242,8 +240,8 @@ def create_nodes(context: LaunchContext):
                 torso_controller,
                 left_arm_controller,
                 right_arm_controller,
-                rviz2,
-                odom_static_tf,
+                imu_broadcaster,
+                # rviz2,
                 hold_standing_pose,
             ] + ft_broadcaster_nodes,
         )
