@@ -23,7 +23,6 @@ install(PROGRAMS
   scripts/com_calculation.py
   scripts/support_polygon.py
   scripts/pd_control.py
-  scripts/hybrid_crouch_controller.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
